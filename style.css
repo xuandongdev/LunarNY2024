@@ -1,6 +1,7 @@
 
 body{
     background-image: url(tet.png);
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: initial;
@@ -8,11 +9,14 @@ body{
     position: relative;
 }
 canvas {
-    cursor: crosshair;
     display: block;
     position:absolute;
     z-index:5;
     top:0;
     width:100% !important;
 }
-
+@media only screen and (max-width: 46.1875em){
+    .main{
+        flex-direction: column-reverse;
+    }
+}
