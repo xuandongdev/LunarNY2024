@@ -1,10 +1,9 @@
-
-body{
+body {
     background-image: url(tet.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: initial;
+    background-size: cover; /* Kích thước ảnh nền để phủ toàn bộ kích thước của phần tử */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+    background-attachment: fixed; /* Giữ ảnh nền cố định trong cửa sổ xem */
+    background-position: center; /* Canh giữa ảnh nền */
     overflow: hidden;
     position: relative;
 }
