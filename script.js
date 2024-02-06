@@ -138,8 +138,11 @@ function loop() {
         particles[ i ].draw();
         particles[ i ].update( i );
     }
+// Trong hàm loop()
 if (timerTick >= timerTotal) {
     if (!mousedown) {
+        // Thay vì tạo một pháo hoa mới
+        // Tạo 10 pháo hoa mới
         for (let i = 0; i < 10; i++) {
             fireworks.push(new Firework(cw / 2, ch, random(0, cw), random(0, ch / 2)));
         }
@@ -148,8 +151,11 @@ if (timerTick >= timerTotal) {
 } else {
     timerTick++;
 }
+
 if (limiterTick >= limiterTotal) {
     if (mousedown) {
+        // Thay vì tạo một pháo hoa mới
+        // Tạo 10 pháo hoa mới
         for (let i = 0; i < 10; i++) {
             fireworks.push(new Firework(cw / 2, ch, mx, my));
         }
@@ -173,3 +179,21 @@ canvas.addEventListener( 'mouseup', function( e ) {
     mousedown = false;
 });
 window.onload = loop;
+document.addEventListener("DOMContentLoaded", function() {
+    const marqueeText = document.querySelector(".marquee p");
+    const containerWidth = document.querySelector(".marquee").offsetWidth;
+    const textWidth = marqueeText.offsetWidth;
+    let position = containerWidth;
+    
+    function animate() {
+        if (position < -textWidth) {
+            position = containerWidth;
+        } else {
+            position -= 1;
+        }
+        marqueeText.style.left = position + "px";
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
+});
