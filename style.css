@@ -19,7 +19,6 @@ canvas {
         flex-direction: column-reverse;
     }
 }
-/* Trong file style.css */
 
 .marquee {
     white-space: nowrap;
@@ -28,7 +27,7 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999; /* Đảm bảo chữ chạy hiển thị phía trên các phần khác */
+    z-index: 999;
 }
 @keyframes changeColor {
     0%   { color: red; } /* Màu ban đầu */
@@ -52,7 +51,4 @@ footer {
     width: 100%;
     padding: 20px;
     text-align: center;
-}
-img{
-    size: 10vw;
 }
