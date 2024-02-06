@@ -140,7 +140,7 @@ function loop() {
     }
 if (timerTick >= timerTotal) {
     if (!mousedown) {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 10; i++) {
             fireworks.push(new Firework(cw / 2, ch, random(0, cw), random(0, ch / 2)));
         }
         timerTick = 0;
@@ -150,7 +150,7 @@ if (timerTick >= timerTotal) {
 }
 if (limiterTick >= limiterTotal) {
     if (mousedown) {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 10; i++) {
             fireworks.push(new Firework(cw / 2, ch, mx, my));
         }
         limiterTick = 0;
